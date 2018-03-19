@@ -35,4 +35,4 @@ for1tst: slti $8, $15, 100
          sw $9, 1500(&15)
 add $15, $15, 1  
 j for1tst
-      
+Exit: ...
