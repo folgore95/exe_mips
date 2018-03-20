@@ -14,3 +14,13 @@ move $16, $0   # sposto zero nel registro 16
 lui $16, 60   # caricamento immediato di una costante nei 16 bit piu significativi
 addi $16, $16, 2305   # somma immediata del valore decimale dei 16 bit meno significativi
 
+# Analisi del codice
+
+# 1 comando
+# move $16, &0 -> In $16 la costante diventa 0000 0000 0000 0000 0000 0000 0000 0000
+
+# 2 comando
+# lui $16, 60 -> In $16 la costante diventa 0000 0000 0011 1100 0000 0000 0000 0000
+
+# 3 comando
+# addi $16, $16, 2305 -> In $16 la costante viene terminata -> 0000 0000 0011 1100 0000 1001 0000 0001
