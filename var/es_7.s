@@ -9,14 +9,14 @@
 
 # Svolgimento
 proc: addi $29, $29, -8   # Creo spazio sulla pila per i registri // posso usare anche la sottraz. immediata: subi $29, $29, 8
-      sw $10, 0($29)   # Salvo i 2 registri interessati nella pila
-      sw $9, 4($29)
+      sw $10, 4($29)   # Salvo i 2 registri interessati nella pila
+      sw $9, 0($29)
       
       add $9, $4, $5   # g+h
       add $10, $6, $7   # i+j
       sub $4, $9, $10   # f = (g+h)-(i+j)
       
-      lw $10, 0($29)   # Ripristino i registri nella pila
-      lw $9, 4($29)
+      lw $10, 4($29)   # Ripristino i registri nella pila
+      lw $9, 0($29)
       addi $29, $29, 8   # Ripristino dello stack della pila
       jr $31    # Ritorno alla procedura chiamante
